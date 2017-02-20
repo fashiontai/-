@@ -1,0 +1,12 @@
+<ion-view view-title="发现" id="familystory">
+	<ion-content class="familyStory_content">
+		<input type="text" placeholder="标题..." ng-model="familyStoryDate.title"/>
+		<textarea placeholder="说点儿什么..." ng-model="familyStoryDate.content"></textarea>
+		<div class="familyStoryImg">
+	    		<span id="addImg" ng-click="addfamilyImg()"></span>
+	   </div>
+		<button class="button button-small" ng-click='familyStoryrelease()'>
+		 	发布
+		</button>
+	</ion-content>
+</ion-view>

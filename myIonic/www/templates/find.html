@@ -1,0 +1,80 @@
+<ion-view view-title="发现" id="find">
+	<ion-content class="find_content">
+	    <ul class="find_content_title">
+	    	<li>
+	    		<i></i>
+	    		<span>家庭故事</span>
+	    	</li>
+	    	<li>
+	    		<i></i>
+	    		<span>亲人定位</span>
+	    	</li>
+	    	<li>
+	    		<i></i>
+	    		<span>姓氏起源</span>
+	    	</li>
+	    	<li>
+	    		<i></i>
+	    		<span>联系人</span>
+	    	</li>
+	    </ul>
+	    <div class="find_content_div">
+	    	<section>
+	    		<span class="add_familystory" ng-click="addfamilystory()">添加</span>
+		   		<div class="list card wishlist_card" id="unfamilyStory">
+					<div class="item item-body" ng-repeat="x in familyStroy">
+						<div class="wishlist_card_page selfWish">
+							<img src="images/wishlist_card_page.png"/>
+							<span>{{x.photourl.length}}张</span>
+						</div>
+						<ion-slide-box does-continue="true">
+						  <ion-slide ng-repeat=" y in x.photourl">
+						    <div class="box ">
+						    	<img ng-src="{{y.photo}}"/>
+						    </div>
+						  </ion-slide>
+						</ion-slide-box>
+					    <p>
+					      	{{x.content}}
+					    </p>
+					</div>
+				</div>
+		   	</section>
+		   	<section>
+		   		<div id="allmap"></div>
+		   	</section>
+		   	<section>
+		   		<div class="search">
+				    <input type="text" placeholder="姓氏检索" ng-model="searchVal" ng-change="fnsearch(searchVal)">
+				</div>
+				<ul class="search_content">
+					<li ng-repeat="x in data" class="search_content_li" ng-click="linkName(x.url)">
+						<img ng-src="{{x.photo}}"/>
+						<span class="zName">{{x.name}}</span>
+					</li>
+				</ul>
+		   	</section>
+		   	<section>
+		   		<ul class="linkman">
+		   			<li ng-repeat="y in linkname">
+		   				<img ng-src="http://photo.aihj.ren/photo/get/{{y.photo}}"/>
+		   				<span>{{y.name}}</span>
+		   				<span>{{y.phone}}</span>
+		   			</li>
+		   		</ul>
+		   	</section>
+	    </div>
+	</ion-content>
+</ion-view>
+
+
+
+
+
+
+
+
+
+
+
+

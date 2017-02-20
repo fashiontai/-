@@ -1,0 +1,18 @@
+<ion-view view-title="纪念日提醒" id="mark">
+	<ion-nav-buttons side="right">
+    	<button class="button ion-android-add" ng-click="addMarkremind()"></button>
+  	</ion-nav-buttons>
+	<ion-content class="gala_content">
+	    <!--<div class="gala_append" ng-click="addMarkremind()">
+	    	<span>添加</span>
+	    </div>-->
+	    <ul class="gala_data">
+	    	<li ng-repeat="x in markDate">
+	    		<span>{{x.remindTime}}</span>
+	    		<p>{{x.content}}</p>
+	    		<span>还剩{{x.dsays}}天</span>
+	    	</li>
+	    </ul>
+	</ion-content>
+</ion-view>
+

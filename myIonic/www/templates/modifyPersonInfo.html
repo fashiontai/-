@@ -1,0 +1,44 @@
+<ion-view view-title="修改个人详情" id="modifyPersonInfo">
+	<ion-content class="modifyPersonInfo_content">
+	   	<div class="modifyPersonInfo_content_details">
+		   	<label class="item item-input">
+			    <span class="input-label">姓名</span>
+			    <input type="text" ng-model="name" id="selfname">
+				</label>
+				<label class="item item-input item-select">
+				    <div class="input-label">
+				      	性别
+				    </div>
+				    <select id="sex">
+				      <option value="1">男</option>
+				      <option value="2">女</option>
+				      <!--<option value="3">保密</option>-->
+				    </select>
+				</label>
+				<label class="item item-input">
+				    <span class="input-label">生日</span>
+				    <input type="date" ng-model="birthday" id="birday">
+				</label>
+				<label class="item item-input">
+				    <span class="input-label">电话</span>
+				    <input type="text" value="13831056789" disabled ng-model="phone" id="phone">
+				</label>
+				<label class="item item-input">
+				    <span class="input-label">邮箱</span>
+				    <input type="email" ng-model="email" id="email">
+				</label>
+				<label class="item item-input">
+				    <span class="input-label">爱好</span>
+				    <input type="text" ng-model="love" id="love">
+				</label>
+				<div class="addPerson_content_details_button">
+				  	<button class="button" ng-click="modifyEditToperson()">
+					  取消修改
+					</button>
+					<button class="button" ng-click="modifyToperson()">
+					  确认修改
+					</button>
+				</div>
+	   	</div>
+	</ion-content>
+</ion-view>

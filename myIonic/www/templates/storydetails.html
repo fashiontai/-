@@ -1,0 +1,16 @@
+<ion-view view-title="相册" id="storydetails">
+	<ion-nav-buttons side="right">
+    	<button class="button ion-android-add" ng-click="addPersonPic()"></button>
+  	</ion-nav-buttons>
+	<ion-content class="storydetails_content padding">
+		<ul class="list storydetails_content_ul">
+			<li class="item" on-hold="onHold(x.id)" ng-repeat="x in picData" ng-click = "shouBigImage('{{x.photo}}/-1/-1')">
+				<img ng-src="{{x.photo}}/114/150"/>
+			</li>
+		</ul>
+	</ion-content>
+	<div id="rightDisplay" ng-if="bigImage" class="popover-backdrop" style="position: fixed;bottom: 0;left: 0;z-index: 10; width: 100%;height: 100%;background-color: rgba(0,0,0,0.3);" ng-click="hideBigImage()">
+	    <img class="img-responsive" style="position: absolute;top: 10%;left: 2%;z-index: 10;display: block;width: 95%; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);" src="{{Url}}"/>
+	</div>
+</ion-view>
+

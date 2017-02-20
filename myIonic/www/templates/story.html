@@ -1,0 +1,43 @@
+<ion-view view-title="成长故事" id="story">
+	<span id="more">+</span>
+	<ion-nav-buttons side="right">
+      	<button class="button ion-android-add" ng-click="morePic()"></button>
+    </ion-nav-buttons>
+	<ion-content class="story_content">
+		<ul class="list story_content_ul">
+			<li class="item" ng-click="storyDetails(x.id)" ng-repeat="x in storyBoxs" on-hold="onHoldStory(x.id)">
+				<img class="storyImg" ng-src="{{x.photourl}}/170/150"/>
+				<h2>{{x.name}}</h2>
+				<p>{{x.content}}</p>
+				<img id="smallImg" ng-src="{{x.photo}}">
+			</li>
+		</ul>
+	</ion-content>
+
+	<div id="addpic">
+		<div class="album">
+			<div class="album_input">
+				<span>相册名称：</span>
+				<input type="text" placeholder="相册名称不能为空" ng-model="storyDate.title"/>
+			</div>
+			<div>
+				<span>主题：</span>
+				<label ng-repeat=" x in radios">
+<input type="radio" name="relative" value="{{x.id}}" id="storyId"
+ checked/>{{x.name}}
+</label>
+			</div>
+			<div class="album_input">
+				<span>相册描述：</span>
+				<textarea ng-model="storyDate.content"></textarea>
+			</div>
+		</div>
+		 
+		
+		<div class="album_button">
+			<button class="button button-clear button-small" ng-click="cancel()">取消创建</button>
+			<button class="button button-clear button-small" ng-click="creat()">创建相册</button>
+		</div>
+	</div>
+</ion-view>
+

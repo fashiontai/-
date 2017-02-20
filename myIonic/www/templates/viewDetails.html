@@ -1,0 +1,39 @@
+<ion-view view-title="成员详情" id="viewDetails">
+	<ion-content class="viewDetails_content">
+	   	<div class="viewDetails_content_content_title">
+	   		<a href="">
+	   			<img ng-src="http://photo.aihj.ren/photo/get/{{userInfo.photo}}"/>
+	   		</a>
+	   		<p class="p001"><span>{{userInfo.name}}</span><span>{{userInfo.relation}}</span></p>
+	   		<span>{{userInfo.sign}}</span>
+	   	</div>
+	   	<div class="viewDetails_content_details">
+			<div>
+				<span>生日</span>
+				<span>{{userInfo.birthday}}</span>
+			</div>
+			<div>
+				<span>电话</span>
+				<span>{{userInfo.phone}}</span>
+			</div>
+			<div>
+				<span>邮箱</span>
+				<span>{{userInfo.email}}</span>
+			</div>
+			<div>
+				<span>爱好</span>
+				<span>{{userInfo.love}}</span>
+			</div>
+	   	</div>
+	   	<!--<div class="viewDetails_content_wish">
+	   		<h3>她的心愿</h3>
+	   		<ul class="viewDetails_content_wish_ul">
+	   			<li>
+	   				<span class="wish_title">参加的主题</span>
+	   				<span class="wish_date">时间参加心愿</span>
+	   				<span class="wish_finish">帮他完成</span>
+	   			</li>
+	   		</ul>
+	   	</div>-->
+	</ion-content>
+</ion-view>

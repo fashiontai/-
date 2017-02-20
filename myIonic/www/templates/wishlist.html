@@ -1,0 +1,30 @@
+<ion-view view-title="愿望清单" id="wishlist">
+	<ion-content class="wishlist_content">
+	    <div class="wishlist_title">
+    		<span class="finishWish unfinishWishSpan" >未完成</span>
+    		<span class="unfinishWish" ng-click="finishWish()">已完成</span>
+	    </div>
+	    <div class="list card wishlist_card" id="unfinishwish">
+			<div class="item item-body" ng-repeat="x in unfonishWish">
+				<div class="wishlist_card_page selfWish">
+					<img src="images/wishlist_card_page.png"/>
+					<span>{{x.photourl.length}}</span>
+				</div>
+				<ion-slide-box does-continue="true">
+				  <ion-slide ng-repeat="y in x.photourl" delegate-handle="slideimgs">
+				    <div class="box">
+				    	<img ng-src="http://photo.aihj.ren/photo/get/{{y.photoName}}"/>
+				    </div>
+				  </ion-slide>
+				</ion-slide-box>
+				<h3>{{x.wishName}}</h3>
+			    <p>
+			      	{{x.contents}}
+			    </p>
+				
+				<span class="wish_finish"><strong>心愿未完成</strong></span>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
+

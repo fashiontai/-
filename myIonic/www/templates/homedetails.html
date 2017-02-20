@@ -1,0 +1,66 @@
+<ion-view view-title="我的心愿" id="homedetails">
+	<ion-content class="homedetails_content">
+	    <div class="homedetails_content_title">
+	    	<img class="homedetails_content_title_span001" ng-src="http://photo.aihj.ren/photo/get/{{wishDetails.photoHead}}">
+	    	<span class="homedetails_content_title_span002">{{wishDetails.userName}}</span>
+	    	<span class="homedetails_content_title_span003">{{wishDetails.publishTime}}</span>
+	    </div>
+	    <div class="list card wishlist_card">
+			<div class="item item-body">
+				<div class="wishlist_card_page selfWish">
+					<span class="smallImg"></span>
+					<span>{{wishDetails.photoName.length}}</span>
+				</div>
+				<ion-slide-box does-continue="true"  delegate-handle="slideimgs">
+				  	<ion-slide ng-repeat = " y in wishDetails.photoName">
+					    <div class="box">
+					    	<img ng-src="http://photo.aihj.ren/photo/get/{{y.photoName}}"/>
+					    </div>
+				  	</ion-slide>
+				</ion-slide-box>
+				<h3>{{wishDetails.wishName}}</h3>
+			    <p>
+			      	{{wishDetails.contents}}
+			    </p>
+			</div>
+		</div>
+		<div class="homedetails_date">
+			<ul class="homedetails_date_ul">
+				<li class="homedetails_date_li">
+					<span></span>
+					<p>6月21日 心愿完成</p>
+				</li>
+				<li class="homedetails_date_li">
+					<span></span>
+					<p>6月21日 心愿实现中</p>
+				</li>
+				<li class="homedetails_date_li">
+					<span></span>
+					<p>6月21日 心愿审查通过，客服正在帮您实现心愿</p>
+				</li>
+				<li class="homedetails_date_li">
+					<span></span>
+					<p>6月20日 心愿审查中</p>
+				</li>
+				<li class="homedetails_date_li">
+					<span></span>
+					<p>6月20日 心愿提交成功</p>
+				</li>
+			</ul>
+		</div>
+		<div class="homedetails_customer" ng-click="Customer()">
+			<span>联系客服</span><span class="customer_img"></span>
+		</div>
+		<div class="homedetails_buttons">
+			<button class="button button-small">
+			  取消心愿
+			</button>
+			<button class="button button-small">
+			  确认完成
+			</button>
+		</div>
+	</ion-content>
+</ion-view>
+
+
+

@@ -1,0 +1,49 @@
+<ion-view view-title="修改成员资料" id="editProfile">
+	<ion-content class="editProfile_content">
+	   	<div class="editProfile_content_title">
+	   		<a href="" ng-click="editImg()">
+	   			<img ng-src="http://photo.aihj.ren/photo/get/{{userInfo.photo}}" id="editImg"/>
+	   		</a>
+	   		<p class="p001"><span>{{userInfo.name}}</span><span>{{userInfo.relation}}</span></p>
+	   		<span>{{userInfo.sign}}</span>
+	   	</div>
+	   	<div class="editProfile_content_details">
+		   	<label class="item item-input">
+			    <span class="input-label">姓名</span>
+			    <input type="text" id="name" value="{{userInfo.name}}">
+				</label>
+				<label class="item item-input">
+					<span class="input-label">称谓</span>
+			   	<input type="text" id="callname" value="{{userInfo.relation}}" disabled>
+				</label>
+				<label class="item item-input">
+					<span class="input-label">性别</span>
+			   	<input type="text" id="sex" value="{{userInfo.sex}}" disabled>
+				</label>
+				<label class="item item-input">
+				    <span class="input-label">生日</span>
+				    <input type="date" id="birthday" ng-model="birthday">
+				</label>
+				<label class="item item-input">
+				    <span class="input-label">电话</span>
+				    <input type="text" id="phone" value="{{userInfo.phone}}" disabled>
+				</label>
+				<label class="item item-input">
+				    <span class="input-label">邮箱</span>
+				    <input type="email" id="email" value="{{userInfo.email}}">
+				</label>
+				<label class="item item-input">
+				    <span class="input-label">爱好</span>
+				    <input type="text" id="love" value="{{userInfo.love}}">
+				</label>
+				<div class="addPerson_content_details_button">
+				  	<button class="button" ng-click="cEditTofamily()">
+					  取消修改
+					</button>
+					<button class="button" ng-click="editTofamily()">
+					  确认修改
+					</button>
+				</div>
+	   	</div>
+	</ion-content>
+</ion-view>

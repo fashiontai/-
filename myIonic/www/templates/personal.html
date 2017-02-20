@@ -1,0 +1,70 @@
+<ion-view view-title="个人中心" id="personal">
+	<ion-nav-buttons side="right">
+    	<button class="button ion-android-settings" ng-click="install()"></button>
+  	</ion-nav-buttons>
+	<ion-content class="personal_content">
+	    <div class="personal_001">
+	    	<div class="divdiv">
+	    		<a ng-click="choosePicMenu()">
+	    			<img src="" id="myImage"/>
+	    		</a>
+	    	</div>
+	    	<div ng-click="modifyPersonInfo()">
+	    		<span>用户名</span>
+	    		<span>修改资料</span>
+	    	</div>
+	    	<span class="s3" ng-click="personinfo()">></span>
+	    </div>
+	    <div class="personal_002">
+	    	<div ng-click="story()">
+	    		<span>成长故事</span>
+	    		<span>></span>
+	    	</div>
+	    	<div ng-click="wishlist()">
+	    		<span>愿望清单</span>
+	    		<span>></span>
+	    	</div>
+	    	<ul class="list">
+			  	<li class="item item-toggle">
+			     	公开位置
+			     	<label class="toggle toggle-assertive" >
+				       	<input type="checkbox"  ng-change="oPosition()" ng-model="oRadio.checked">
+				       	<div class="track">
+				         	<div class="handle"></div>
+				       	</div>
+			     	</label>
+			  	</li>
+			</ul>
+	    </div>
+	    <div class="personal_003">
+	    	<div ng-click="gala()">
+	    		<span>祭日提醒</span>
+	    		<span>></span>
+	    	</div>
+	    	<div ng-click="mark()">
+	    		<span>纪念日提醒</span>
+	    		<span>></span>
+	    	</div>
+	    </div>
+	    <div class="personal_004">
+	    	<div ng-click="feedback()">
+	    		<span>体验反馈</span>
+	    		<span>></span>
+	    	</div>
+	    	<div ng-click="contact()">
+	    		<span>联系我们</span>
+	    		<span>></span>
+	    	</div>
+	    	<div ng-click="about()">
+	    		<span>关于</span>
+	    		<span>></span>
+	    	</div>
+	    </div>
+	    <div class="personal_005">
+	    	<button class="button button-full" ng-click="quit()">
+			  退出登录
+			</button>
+	    </div>
+	    
+	</ion-content>
+</ion-view>

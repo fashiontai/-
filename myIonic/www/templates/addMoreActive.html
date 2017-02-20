@@ -1,0 +1,30 @@
+<ion-view view-title="个人心愿" id="addMoreActive">
+	<ion-content class="addMoreActive_content" delegate-handle="addMoreScroll">
+		<div class="moreWish">
+			<ul class="moreWish_ul">
+				<li>推荐心愿</li>
+				|
+				<li>自定义心愿</li>
+			</ul>
+			<div class="defaultWish">
+				<ul class="defaultWish_list">
+					<li class="defaultWish_item">带父母出国去旅行 </li>
+					<li class="defaultWish_item">给家人一个惊喜的生日宴会</li>
+					<li class="defaultWish_item">家人突然出现在身边</li>
+					<li class="defaultWish_item">带父母做个检查</li>
+					<li class="defaultWish_item">天凉了，为家人织条毛巾</li>
+				</ul>
+			</div>
+			<div class="customContent">
+		    	<input type="text" id="customTitle" placeholder="标题..."/>
+		    	<textarea id="customText" placeholder="说点儿什么..."></textarea>
+		    	<div class="addActiveImg">
+		    		<span id="addImg" ng-click="addImg()"></span>
+		    	</div>
+		    	<button class="button button-small" ng-click='release()'>
+				 	发布
+				</button>
+		    </div>
+		</div>
+	</ion-content>
+</ion-view>

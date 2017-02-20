@@ -1,0 +1,81 @@
+<ion-view view-title="添加成员" id="aperson">
+	<ion-content class="addPerson_content">
+	   	<div class="addPerson_content_title">
+	   		<a href="" ng-click="addAimg()">
+	   			<img src="images/addPerson_img.png"/ id="addpersonImg">
+	   		</a>
+	   		<h4>添加头像</h4>
+	   		<span></span>
+	   	</div>
+	   	<div class="addPerson_content_details list">
+	   		<label class="item item-input">
+			    <span class="input-label">姓名</span>
+			    <input type="text" ng-model="addperson.name">
+			</label>
+			<label class="item item-input item-select">
+			    <div class="input-label">
+			      	称谓
+			    </div>
+			    <select ng-model="addperson.callName">
+			      <option value="10">妻子</option>
+			      <option value="20">丈夫</option>
+			      <option value="30">爸爸</option>
+			      <option value="40">妈妈</option>
+			      <option value="50">哥哥</option>
+			      <option value="60">弟弟</option>
+			      <option value="70">姐姐</option>
+			      <option value="80">妹妹</option>
+			      <option value="90">儿子</option>
+			      <option value="99">女儿</option>
+			    </select>
+			</label>
+			<label class="item item-input item-select">
+			    <div class="input-label">
+			      	性别
+			    </div>
+			    <select ng-model="addperson.sex">
+			      <option value="1">男</option>
+			      <option value="2">女</option>
+			    </select>
+			</label>
+			<label class="item item-input">
+			    <span class="input-label">生日</span>
+			    <input type="date" id="addDate">
+			</label>
+			<label class="item item-input">
+			    <span class="input-label">电话</span>
+			    <input type="text" ng-model="addperson.tel">
+			</label>
+			<label class="item item-input">
+			    <span class="input-label">邮箱</span>
+			    <input type="email" ng-model="addperson.email">
+			</label>
+			<label class="item item-input">
+			    <span class="input-label">爱好</span>
+			    <input type="text" ng-model="addperson.love">
+			</label>
+			<div class="addPerson_content_details_button">
+			  	<button class="button" ng-click="cancleTofamily()">
+				  取消发布
+				</button>
+				<button class="button" ng-click="releaseTofamily()">
+				  确认发布
+				</button>
+			</div>
+	   	</div>
+	</ion-content>
+</ion-view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

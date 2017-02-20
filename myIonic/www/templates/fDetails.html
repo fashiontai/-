@@ -1,0 +1,28 @@
+<ion-view view-title="家族所有心愿" id="familyWishdetails">
+	<ion-content class="familyWishdetails_content">
+	    <div class="list card wishlist_card">
+			<div class="item item-body" ng-repeat=" x in familyWishList">
+				<div class="homedetails_content_title">
+			    	<img class="homedetails_content_title_span001" ng-src="http://photo.aihj.ren/photo/get/{{x.photoHead}}">
+			    	<span class="homedetails_content_title_span002">{{x.callName}}</span>
+			    	<span class="homedetails_content_title_span003">{{x.publishTime}}</span>
+			    </div>
+				<div class="wishlist_card_page">
+					<span class="smallImg"></span>
+					<span>{{x.photo.length}}</span>
+				</div>
+				<ion-slide-box does-continue="true">
+				  	<ion-slide ng-repeat="img in x.photo">
+					    <div class="box ">
+					    	<img ng-src="http://photo.aihj.ren/photo/get/{{img.photoName}}"/>
+					    </div>
+				  	</ion-slide>
+				</ion-slide-box>
+				<h3>{{x.wishName}}</h3>
+			    <p>
+			      	{{x.contents}}
+			    </p>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

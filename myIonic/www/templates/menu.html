@@ -1,0 +1,26 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-nav-bar class="bar-stable tabs-positive">
+	  	<ion-nav-back-button>
+	  	</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+  	<ion-tabs class="tabs-icon-top">
+  	
+		<ion-tab title="首页" icon="ion-home-on" icon-on="ion-home-on" icon-off="ion-home-off" ui-sref="app.home">
+	      	<ion-nav-view name="homeContent"></ion-nav-view>
+	    </ion-tab>
+	
+	    <ion-tab title="家族树" icon-on="ion-family-on" icon-off="ion-family-off" ui-sref="app.family">
+	      	<ion-nav-view name="familyContent"></ion-nav-view>
+	    </ion-tab>
+	
+	    <ion-tab title="发现" icon-on="ion-find-on" icon-off="ion-find-off" ui-sref="app.find">
+	      	<ion-nav-view name="findContent"></ion-nav-view>
+	    </ion-tab>
+	
+		<ion-tab title="个人中心" icon-on="ion-personal-on" icon-off="ion-personal-off" ui-sref="app.personal">
+	      	<ion-nav-view name="personalContent"></ion-nav-view>
+	    </ion-tab>
+    
+  	</ion-tabs>
+</ion-side-menus>

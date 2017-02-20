@@ -1,0 +1,48 @@
+<ion-view view-title="爱惠家" id="home">
+	<ion-content class="home_content">
+		<div id="home_content_first">
+		    <div class="entering home_content_div">
+		    	<p id="p001">您的家族树未录入亲友</p>
+	    		<ul id="marquee">
+	    		</ul>
+		    	<p id="p002">您目前</p>
+		    	<h3 id="h001">暂不可发布心愿</h3>
+		    	<p  id="p003">完善您的家族树，获得更多心愿权限</p>
+		    	<p class="finish_family" ui-sref="app.family">
+		    		<span>完善家族树</span>
+		    		<span>></span>
+		    	</p>
+		    </div>
+		    <div class="mywish home_content_div">
+		    	<h4><span></span><span>我的心愿</span><span></span></h4>
+				<ion-slide-box show-pager="false" class="home_content_slide" delegate-handle="slideimgs">
+				  <ion-slide ng-repeat="x in myWish" ng-click="chagePath(x.id)">
+				    <div class="box">
+				    	<img ng-src="http://photo.aihj.ren/photo/get/{{x.photo[0].photoName}}"/>
+				    </div>
+				  </ion-slide>
+				  <ion-slide ng-click="myMoreWish()">
+				    <div class="box boximg">
+				    </div>
+				  </ion-slide>
+				</ion-slide-box>
+		    	<p class="addmore" ng-click="addMoreActive()"><span>+</span>添加更多活动</p>
+		    </div>
+		    <div class="attendwish">
+		    	<h4><span></span><span>家族成员心愿</span><span></span></h4>
+				<ion-slide-box show-pager="false" delegate-handle="slideimgs" class="home_content_slide">
+				  <ion-slide ng-repeat="z in personwish" ng-click="gofamily(z.id)">
+				    <div class="box">
+				    	<img ng-src="http://photo.aihj.ren/photo/get/{{z.photo[0].photoName}}/382/221"/>
+				    </div>
+				  </ion-slide>
+				  <ion-slide ng-click="familyWish()">
+				    <div class="box">
+				    	<img src="images/lookMore_img_03.png"/>
+				    </div>
+				  </ion-slide>
+				</ion-slide-box>
+		    </div>
+	    </div>
+	</ion-content>
+</ion-view>
